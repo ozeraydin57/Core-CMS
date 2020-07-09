@@ -1,0 +1,31 @@
+﻿@model ProductListViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Product List</h2>
+
+<a class="btn btn-xs btn-success" asp-controller="Admin" asp-action="Add">Add a new product</a>
+<div>
+    <table class="table table-responsive">
+        <tr>
+            <td>Product Name</td>
+            <td>Unit Price</td>
+            <td>Units In Stock</td>
+            <td></td>
+            <td></td>
+        </tr>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.ProductName</td>
+                <td>@product.UnitPrice</td>
+                <td>@product.UnitsInStock</td>
+                <td><a class="btn btn-xs btn-info" asp-controller="Admin" asp-action="Update" asp-route-productId="@product.ProductId">Update</a></td>
+                <td><a class="btn btn-xs btn-danger" asp-controller="Admin" asp-action="Delete" asp-route-productId="@product.ProductId">Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>

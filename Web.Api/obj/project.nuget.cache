@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UHetk9zla8myTP4jU8juMJx+tZ/JGAmNkxSP9fhhZ3IbIGk427FeG7a8yFDpnmR0EZGZEgxuK+M8C9bHrL5/rg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\OA-HOME\\source\\repos\\OAProject\\Web.Api\\Web.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\OA-HOME\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

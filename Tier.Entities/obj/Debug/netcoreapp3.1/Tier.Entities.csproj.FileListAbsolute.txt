@@ -1,0 +1,12 @@
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\bin\Debug\netcoreapp3.1\Tier.Entities.deps.json
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\bin\Debug\netcoreapp3.1\Tier.Entities.dll
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\bin\Debug\netcoreapp3.1\Tier.Entities.pdb
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\obj\Debug\netcoreapp3.1\Tier.Entities.AssemblyInfoInputs.cache
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\obj\Debug\netcoreapp3.1\Tier.Entities.AssemblyInfo.cs
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\obj\Debug\netcoreapp3.1\Tier.Entities.csproj.CoreCompileInputs.cache
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\obj\Debug\netcoreapp3.1\Tier.Entities.dll
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\obj\Debug\netcoreapp3.1\Tier.Entities.pdb
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\obj\Debug\netcoreapp3.1\Tier.Entities.csprojAssemblyReference.cache
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Entities\obj\Debug\netcoreapp3.1\Tier.Entities.csproj.CopyComplete

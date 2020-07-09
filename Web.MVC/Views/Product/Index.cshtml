@@ -1,0 +1,41 @@
+﻿@model ProductListViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Ürünler Sayfası</h1>
+
+<div class="row">
+    <div class="col-md-2">
+        @await Component.InvokeAsync("CategoryList")
+    </div>
+    <div class="col-md-8">
+        <table class="table-striped">
+            <tr>
+                <td>Ürün Adı</td>
+                <td>Birim Fiyat</td>
+                <td>Stok Adet</td>
+                <td></td>
+            </tr>
+            @foreach (var item in Model.Products)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.UnitPrice</td>
+                    <td>@item.UnitsInStock</td>
+                    <td><a class="btn btn-sm btn-success" asp-controller="Cart" asp-action="AddToCart" asp-route-productId="@item.ProductId"> Ekle </a></td>
+                </tr>
+            }
+        </table>
+        <product-list-pager current-category="@Model.CurrentCategory"
+                            current-page="@Model.CurrentPage"
+                            page-count="@Model.PageCount"
+                            page-size="@Model.Pagesize">
+
+        </product-list-pager>
+    </div>
+    <div class="col-md-2">
+        @await Component.InvokeAsync("CartSummary")
+    </div>
+</div>

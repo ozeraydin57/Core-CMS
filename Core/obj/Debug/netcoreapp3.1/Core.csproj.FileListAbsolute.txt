@@ -1,0 +1,8 @@
+C:\Users\OA-HOME\source\repos\OAProject\Core\bin\Debug\netcoreapp3.1\Core.deps.json
+C:\Users\OA-HOME\source\repos\OAProject\Core\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\OA-HOME\source\repos\OAProject\Core\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\OA-HOME\source\repos\OAProject\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+C:\Users\OA-HOME\source\repos\OAProject\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+C:\Users\OA-HOME\source\repos\OAProject\Core\obj\Debug\netcoreapp3.1\Core.dll
+C:\Users\OA-HOME\source\repos\OAProject\Core\obj\Debug\netcoreapp3.1\Core.pdb
+C:\Users\OA-HOME\source\repos\OAProject\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache

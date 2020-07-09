@@ -1,0 +1,16 @@
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\bin\Debug\netcoreapp3.1\Tier.Business.deps.json
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\bin\Debug\netcoreapp3.1\Tier.Business.dll
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\bin\Debug\netcoreapp3.1\Tier.Business.pdb
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\obj\Debug\netcoreapp3.1\Tier.Business.AssemblyInfoInputs.cache
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\obj\Debug\netcoreapp3.1\Tier.Business.AssemblyInfo.cs
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\obj\Debug\netcoreapp3.1\Tier.Business.csproj.CoreCompileInputs.cache
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\obj\Debug\netcoreapp3.1\Tier.Business.dll
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\obj\Debug\netcoreapp3.1\Tier.Business.pdb
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\bin\Debug\netcoreapp3.1\Tier.Entities.dll
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\bin\Debug\netcoreapp3.1\Tier.Entities.pdb
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\obj\Debug\netcoreapp3.1\Tier.Business.csprojAssemblyReference.cache
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\obj\Debug\netcoreapp3.1\Tier.Business.csproj.CopyComplete
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\bin\Debug\netcoreapp3.1\Tier.DataAccess.dll
+C:\Users\OA-HOME\source\repos\OAProject\Tier.Business\bin\Debug\netcoreapp3.1\Tier.DataAccess.pdb

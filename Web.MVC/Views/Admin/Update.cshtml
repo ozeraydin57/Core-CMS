@@ -1,0 +1,34 @@
+﻿@model ProductUpdateViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update Product</h2>
+
+<form asp-controller="Admin" asp-action="Update" method="post">
+    <div class="form-group">
+        <label asp-for="Product.ProductName"></label>
+        <input asp-for="Product.ProductName" class="form-control" placeholder="Product Name" />
+        <span asp-validation-for="Product.ProductName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.CategoryId"></label>
+        <select asp-for="Product.CategoryId" class="form-control"
+                asp-items="@(new SelectList(Model.Categories,"CategoryId","CategoryName"))"></select>
+        <span asp-validation-for="Product.CategoryId"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.UnitPrice"></label>
+        <input asp-for="Product.UnitPrice" class="form-control" placeholder="Unit Price" />
+        <span asp-validation-for="Product.UnitPrice"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.UnitsInStock"></label>
+        <input asp-for="Product.UnitsInStock" class="form-control" placeholder="Units In Stock" />
+        <span asp-validation-for="Product.UnitsInStock"></span>
+    </div>
+    <input type="hidden" asp-for="Product.ProductId"/>
+    <input type="submit" value="Update" class="btn btn-xs btn-success" />
+</form>
