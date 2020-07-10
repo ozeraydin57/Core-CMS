@@ -16,7 +16,7 @@ namespace Web.MVC.Controllers
         }
 
         // GET: PostController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Detail(int id)
         {
             return View();
         }

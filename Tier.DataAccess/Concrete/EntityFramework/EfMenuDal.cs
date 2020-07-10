@@ -1,4 +1,5 @@
 ﻿using Core.DataAccess.EntitiyFramework;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,5 +10,6 @@ namespace Tier.DataAccess.Concrete.EntityFramework
 {
     public class EfMenuDal : EfEntityRepositoryBase<Menu, OADBContext>, IMenuDal
     {
+       
     }
 }

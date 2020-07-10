@@ -31,6 +31,12 @@ namespace Tier.Business.Concrete
         {
             return _postDal.GetList();
         }
+        public List<PostComplex> GetAllComplex()
+        {
+            return _postDal.GetListComplex();
+        }
+
+
 
         public List<Post> GetByAuthorId(int id)
         {

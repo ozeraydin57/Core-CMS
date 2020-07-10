@@ -8,6 +8,6 @@ namespace Web.MVC.Models
 {
     public class PostViewModel
     {
-       public  List<Post> Posts { get; set; }
+        public List<PostComplex> Posts { get; set; }
     }
 }

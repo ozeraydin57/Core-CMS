@@ -5,11 +5,10 @@ using System.Text;
 
 namespace Tier.Entities.Concrete
 {
-    public class Category : IEntity
+    public class PostCategory : IEntity
     {
         public int Id { get; set; }
-        public int ParentCategoryId { get; set; }
-        public string Name { get; set; }
-        public string Summary { get; set; }
+        public int PostId { get; set; }
+        public int CategoryId { get; set; }
     }
 }
