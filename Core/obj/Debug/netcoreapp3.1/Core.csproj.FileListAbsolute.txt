@@ -6,3 +6,4 @@ C:\Users\OA-HOME\source\repos\OAProject\Core\obj\Debug\netcoreapp3.1\Core.Assemb
 C:\Users\OA-HOME\source\repos\OAProject\Core\obj\Debug\netcoreapp3.1\Core.dll
 C:\Users\OA-HOME\source\repos\OAProject\Core\obj\Debug\netcoreapp3.1\Core.pdb
 C:\Users\OA-HOME\source\repos\OAProject\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\OA-HOME\source\repos\OAProject\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
