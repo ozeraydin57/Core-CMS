@@ -15,6 +15,7 @@ namespace Tier.Entities.Concrete
         public DateTime CreateDate { get; set; }
         public string Type { get; set; }
         public bool IsActive { get; set; }
+        public string ImagePath { get; set; }
     }
 
     public class PostDetail : IEntity

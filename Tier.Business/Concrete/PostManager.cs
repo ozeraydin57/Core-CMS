@@ -27,13 +27,9 @@ namespace Tier.Business.Concrete
             _postDal.Delete(new Post { Id = id });
         }
 
-        public List<Post> GetAll()
+        public List<PostComplex> GetAll(int skip,int take)
         {
-            return _postDal.GetList();
-        }
-        public List<PostComplex> GetAllComplex()
-        {
-            return _postDal.GetListComplex();
+            return _postDal.GetListComplex(skip,take);
         }
 
 

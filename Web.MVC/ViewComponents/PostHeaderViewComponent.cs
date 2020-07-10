@@ -9,16 +9,16 @@ using Web.MVC.Models;
 
 namespace Web.MVC.ViewComponents
 {
-    public class PostRecentViewComponent : ViewComponent
+    public class PostHeaderViewComponent : ViewComponent
     {
         private IPostService _postService;
-        public PostRecentViewComponent(IPostService postService) => _postService = postService;
+        public PostHeaderViewComponent(IPostService postService) => _postService = postService;
 
-        public ViewViewComponentResult Invoke(int skip, int take)
+        public ViewViewComponentResult Invoke()
         {
             var model = new PostViewModel
             {
-                Posts = _postService.GetAll(skip,take).ToList()
+                Posts = _postService.GetAll(0,4).ToList()
             };
 
             return View(model);

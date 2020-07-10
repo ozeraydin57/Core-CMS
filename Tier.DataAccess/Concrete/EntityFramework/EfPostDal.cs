@@ -11,19 +11,23 @@ namespace Tier.DataAccess.Concrete.EntityFramework
 {
     public class EfPostDal : EfEntityRepositoryBase<Post, OADBContext>, IPostDal
     {
-        public List<PostComplex> GetListComplex()
+        public List<PostComplex> GetListComplex(int skip, int take)
         {
             using (var context = new OADBContext())
             {
                 var post = from p in context.Set<Post>()
-                           join d in context.Set<PostDetail>() on p.Id equals d.PostId into temp
-                           from j in temp.DefaultIfEmpty()
+                           join pd in context.Set<PostDetail>() on p.Id equals pd.PostId into temp
+                           from pdj in temp.DefaultIfEmpty()
+                           join u in context.Set<User>() on p.UserId equals u.Id into tempU
+                           from uj in tempU.DefaultIfEmpty()
                            where p.IsActive
                            orderby p.CreateDate descending
+
                            select new PostComplex
                            {
                                Post = p,
-                               PostDetail = j ?? new PostDetail(),
+                               User = uj ?? new User(),
+                               PostDetail = pdj ?? new PostDetail(),
                                Caregories = (
                                        from pc in context.Set<PostCategory>()
                                        join c in context.Set<Category>() on pc.CategoryId equals c.Id
@@ -32,7 +36,7 @@ namespace Tier.DataAccess.Concrete.EntityFramework
                                ).ToList() ?? new List<Category>()
                            };
 
-                return post.ToList();
+                return post.Skip(skip).Take(take).ToList();
             }
         }
     }

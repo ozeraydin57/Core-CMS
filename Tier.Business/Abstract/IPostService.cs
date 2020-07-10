@@ -7,8 +7,7 @@ namespace Tier.Business.Abstract
 {
    public interface IPostService
     {
-        List<Post> GetAll();
-        List<PostComplex> GetAllComplex();
+        List<PostComplex> GetAll(int skip, int take);
         void Add(Post data);
         void Update(Post data);
         void Delete(int id);

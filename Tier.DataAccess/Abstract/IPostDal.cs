@@ -7,6 +7,6 @@ namespace Tier.DataAccess.Abstract
     public interface IPostDal : IEntityRepository<Post>
     {
         //özel sorgu lazım olacak
-        List<PostComplex> GetListComplex(); 
+        List<PostComplex> GetListComplex(int skip,int take); 
     }
 }

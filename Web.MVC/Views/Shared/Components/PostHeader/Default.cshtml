@@ -1,0 +1,36 @@
+﻿@model PostViewModel
+
+<section class="section first-section">
+    <div class="container-fluid">
+        <div class="masonry-blog clearfix">
+            @{string clasName = "second";
+                @foreach (var item in Model.Posts)
+                {
+                    <div class="@clasName-slot">
+                        <div class="masonry-box post-media">
+                           <img src="@item.Post.ImagePath" alt="" class="img-fluid">
+                            <div class="shadoweffect">
+                                <div class="shadow-desc">
+                                    <div class="blog-meta">
+                                        @foreach (var itemCat in item.Caregories)
+                                        {
+                                            <span class="bg-orange"><a href="/Category/Detail/@itemCat.Id" title="@itemCat.Name">@itemCat.Name</a></span>
+                                        }
+                                        <h4><a href="/Post/Detail/@item.Post.Id" title="">@item.Post.Title</a></h4>
+                                        <small><a href="#" title="">@item.Post.CreateDate</a></small>
+                                        <small><a href="#" title="">@item.Post.UserId</a></small>
+                                    </div><!-- end meta -->
+                                </div><!-- end shadow-desc -->
+                            </div><!-- end shadow -->
+                        </div><!-- end post-media -->
+                    </div><!-- end first-side -->
+
+                    //if (clasName == "first")
+                    //    clasName = "second";
+                    //else if (clasName == "second")
+                    //    clasName = "last";
+                }
+            }
+        </div><!-- end masonry -->
+    </div>
+</section>

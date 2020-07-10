@@ -9,5 +9,6 @@ namespace Web.MVC.Models
     public class PostViewModel
     {
         public List<PostComplex> Posts { get; set; }
+        public int Take { get; set; }
     }
 }
