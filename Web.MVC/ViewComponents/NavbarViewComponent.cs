@@ -19,6 +19,7 @@ namespace Web.MVC.ViewComponents
             _menuService = menuService;
         }
 
+
         public ViewViewComponentResult Invoke()
         {
             var model = new MenuViewModel
