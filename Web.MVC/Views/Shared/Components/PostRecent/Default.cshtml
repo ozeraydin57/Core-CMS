@@ -1,0 +1,32 @@
+﻿@model PostViewModel
+
+
+<div class="blog-list clearfix">
+
+    @foreach (var item in Model.Posts)
+    {
+        <div class="blog-box row">
+            <div class="col-md-4">
+                <div class="post-media">
+                    <a href="tech-single.html" title="">
+                        <img src="upload/tech_blog_01.jpg" alt="" class="img-fluid">
+                        <div class="hovereffect"></div>
+                    </a>
+                </div><!-- end media -->
+            </div><!-- end col -->
+
+            <div class="blog-meta big-meta col-md-8">
+                <h4><a href="tech-single.html" title="">@item.Title</a></h4>
+
+                <p>@item.Summary</p>
+                
+            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Gadgets</a></small>
+                <small><a href="tech-single.html" title="">@item.CreateDate</a></small>
+                <small><a href="tech-author.html" title="">@item.UserId</a></small>
+                <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 1280</a></small>
+            </div><!-- end meta -->
+        </div><!-- end blog-box -->
+
+        <hr class="invis">
+    }
+</div>

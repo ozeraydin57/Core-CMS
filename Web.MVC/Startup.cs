@@ -37,7 +37,9 @@ namespace Web.MVC
             services.AddScoped<IParamSessionService, ParamSessionService>();
             //services.AddScoped<SettingSessionService>();
 
-
+            services.AddScoped<IPostService, PostManager>();
+            services.AddScoped<IPostDal, EfPostDal>();
+            services.AddScoped<IPostDetailDal, EfPostDetailDal>();
 
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IProductDal, EfProductDal>();

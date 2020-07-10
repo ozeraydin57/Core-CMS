@@ -10,7 +10,6 @@ namespace Tier.Business.Abstract
         List<Param> GetAll();
         void Add(Param data);
         void Update(Param data);
-        void Delete(int id);
         Param GetById(int id);
     }
 }

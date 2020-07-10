@@ -17,6 +17,8 @@ namespace Tier.DataAccess.Concrete.EntityFramework
 
         public DbSet<Menu> Menu { get; set; }
         public DbSet<Param> Param { get; set; }
+        public DbSet<Post> Post { get; set; }
+        public DbSet<PostDetail> PostDetail { get; set; }
 
     }
 }

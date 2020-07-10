@@ -17,11 +17,6 @@ namespace Tier.Business.Concrete
             _settingDal.Add(data);
         }
 
-        public void Delete(int id)
-        {
-            _settingDal.Delete(new Param { Id = id });
-        }
-
         public List<Param> GetAll()
         {
             return _settingDal.GetList();
