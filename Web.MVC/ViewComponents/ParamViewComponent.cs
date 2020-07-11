@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Tier.Entities.Concrete;
 using Web.MVC.Models;
 using Web.MVC.Services;
 
@@ -19,7 +20,7 @@ namespace Web.MVC.ViewComponents
 
         public ViewViewComponentResult Invoke(string key)
         {
-            var value = _settingService.GetParam(key);
+            var value = _settingService.GetParam(key)?? new Param();
 
             var model = new ParamsViewModel
             {

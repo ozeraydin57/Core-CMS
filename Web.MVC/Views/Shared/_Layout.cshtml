@@ -10,9 +10,9 @@
 
     <!-- Site Metas -->
     <title>@ViewData["Title"]</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="keywords" content="@ViewData["keywords"]">
+    <meta name="description" content="@ViewData["description"]">
+    <meta name="author" content="@ViewData["author"]">
 
     <!-- Site Icons -->
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
@@ -81,11 +81,11 @@
                                 <a href="index.html"><img src="images/version/tech-footer-logo.png" alt="" class="img-fluid"></a>
                                 @await Component.InvokeAsync("Param", new { key = "FooterSlogan" })
                                 <div class="social">
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+                                    <a href="@await Component.InvokeAsync("Param",new{ key="Facebook" })" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="@await Component.InvokeAsync("Param",new{ key="Twitter" })" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="@await Component.InvokeAsync("Param",new{ key="Instagram" })" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                    <a href="@await Component.InvokeAsync("Param",new{ key="GooglePlus" })" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+                                    <a href="@await Component.InvokeAsync("Param",new{ key="Pinterest" })" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
                                 </div>
 
                                 <hr class="invis">
@@ -120,7 +120,7 @@
                             <h2 class="widget-title">Copyrights</h2>
                             <div class="link-widget">
                                 <ul>
-                                    <li><a href="#">About us</a></li>
+                                    <li><a href="/Page/Detail/">About us</a></li>
                                     <li><a href="#">Advertising</a></li>
                                     <li><a href="#">Write for us</a></li>
                                     <li><a href="#">Trademark</a></li>

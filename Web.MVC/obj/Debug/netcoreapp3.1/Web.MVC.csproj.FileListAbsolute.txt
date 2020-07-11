@@ -172,3 +172,4 @@ C:\Users\OA-HOME\source\repos\OAProject\Web.MVC\obj\Debug\netcoreapp3.1\Razor\Vi
 C:\Users\OA-HOME\source\repos\OAProject\Web.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\PostRecent\Default.cshtml.g.cs
 C:\Users\OA-HOME\source\repos\OAProject\Web.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Post\Detail.cshtml.g.cs
 C:\Users\OA-HOME\source\repos\OAProject\Web.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\PostHeader\Default.cshtml.g.cs
+C:\Users\OA-HOME\source\repos\OAProject\Web.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\FollowUs\Default.cshtml.g.cs
