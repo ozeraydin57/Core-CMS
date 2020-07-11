@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Cryptography;
 using System.Text;
 using Tier.DataAccess.Abstract;
@@ -11,7 +12,7 @@ namespace Tier.DataAccess.Concrete.EntityFramework
 {
     public class EfPostDal : EfEntityRepositoryBase<Post, OADBContext>, IPostDal
     {
-        public List<PostComplex> GetListComplex(int skip, int take)
+        public List<PostComplex> GetListComplex(int skip, int take, Expression<Func<PostComplex, bool>> filter = null)
         {
             using (var context = new OADBContext())
             {
@@ -35,9 +36,18 @@ namespace Tier.DataAccess.Concrete.EntityFramework
                                        select c
                                ).ToList() ?? new List<Category>()
                            };
+                if (filter != null)
+                    post = post.Where(filter);
+
 
                 return post.Skip(skip).Take(take).ToList();
             }
         }
+
+        public PostComplex GetComplex(Expression<Func<PostComplex, bool>> filter = null)
+        {
+            return GetListComplex(0, 1, filter).FirstOrDefault();
+        }
+
     }
 }

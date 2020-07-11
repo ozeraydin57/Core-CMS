@@ -31,7 +31,10 @@ namespace Tier.Business.Concrete
         {
             return _postDal.GetListComplex(skip,take);
         }
-
+        public PostComplex GetById(int id)
+        {
+            return _postDal.GetComplex(k=>k.Post.Id==id);
+        }
 
 
         public List<Post> GetByAuthorId(int id)
@@ -42,11 +45,6 @@ namespace Tier.Business.Concrete
         public List<Post> GetByCategoryId(int id)
         {
             throw new NotImplementedException();
-        }
-
-        public Post GetById(int id)
-        {
-            return _postDal.Get(k => k.Id == id);
         }
 
         public void Update(Post data)
