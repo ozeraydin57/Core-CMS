@@ -1,6 +1,8 @@
 # OAProject => .Net Core MVC CMC
 
-.net core 3.1 mvc ile hazırlanan içerik yönetim sistemi, proje çok katmanlı mimari patternine göre ilerleyip .net core özelliklerini kullanmayı hedeflemektedir.
+Asp .net core 3.1 mvc ile hazırlanan içerik yönetim sistemi.
+
+Proje çok katmanlı mimari patternine göre ilerleyip .net core özelliklerini kullanmayı hedeflemektedir.
 
 ## Olacak olan özellikleri
 
