@@ -20,7 +20,7 @@
                             <li class="breadcrumb-item active">@Post.Post.Title</li>
                         </ol>
                         <span class="color-orange">
-                            @foreach (var item in Post.Caregories)
+                            @foreach (var item in Post.Caregories.Where(k => k.Type == "category"))
                             {
                                 <a href="/Category/Detail/@item.Id" title="">@item.Name</a>
                             }
@@ -54,10 +54,13 @@
                     <div class="blog-title-area">
                         <div class="tag-cloud-single">
                             <span>Tags</span>
-                            <small><a href="#" title="">lifestyle</a></small>
-                            <small><a href="#" title="">colorful</a></small>
-                            <small><a href="#" title="">trending</a></small>
-                            <small><a href="#" title="">another tag</a></small>
+                            @foreach (var item in Post.Caregories.Where(k => k.Type == "tag"))
+                            {
+                                //<a href="/Category/Detail/@item.Id" title="">@item.Name</a>
+                                <small><a href="/Tag/Detail/@item.Id" title="">@item.Name</a></small>
+                            }
+
+                           
                         </div><!-- end meta -->
 
                         <div class="post-sharing">

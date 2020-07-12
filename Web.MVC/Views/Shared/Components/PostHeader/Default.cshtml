@@ -12,7 +12,7 @@
                             <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
-                                        @foreach (var itemCat in item.Caregories)
+                                        @foreach (var itemCat in item.Caregories.Where(k=>k.Type=="category"))
                                         {
                                             <span class="bg-orange"><a href="/Category/Detail/@itemCat.Id" title="@itemCat.Name">@itemCat.Name</a></span>
                                         }

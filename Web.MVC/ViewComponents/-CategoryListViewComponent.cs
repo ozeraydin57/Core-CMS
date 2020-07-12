@@ -19,7 +19,7 @@ namespace Web.MVC.ViewComponents
 
         public ViewViewComponentResult Invoke()
         {
-            var list = _categoryService.GetAll();
+            var list = _categoryService.GetAll("category");
             var model = new CategoryListViewModel
             {
                 Categories=list,

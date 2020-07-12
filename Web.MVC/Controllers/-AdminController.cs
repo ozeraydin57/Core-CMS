@@ -39,7 +39,7 @@ namespace Web.MVC.Controllers
             var model = new ProductAddViewModel
             {
                 Product = new Product(),
-                Categories = _categoryService.GetAll()
+                Categories = _categoryService.GetAll("category")
             };
             return View(model);
         }
@@ -61,7 +61,7 @@ namespace Web.MVC.Controllers
             var model = new ProductUpdateViewModel
             {
                 Product = _productService.GetById(productId),
-                Categories = _categoryService.GetAll()
+                Categories = _categoryService.GetAll("category")
             };
 
             return View(model);

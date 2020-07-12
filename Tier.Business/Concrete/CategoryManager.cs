@@ -18,17 +18,17 @@ namespace Tier.Business.Concrete
 
         public void Add(Category category)
         {
-            throw new NotImplementedException();
+           
         }
 
         public void Delete(int categoryId)
         {
-            throw new NotImplementedException();
+            
         }
 
-        public List<Category> GetAll()
+        public List<Category> GetAll(string type)
         {
-            return _categoryDal.GetList();
+            return _categoryDal.GetList(k=>k.Type==type);
         }
 
         public List<Category> GetByCategoryId(int categoryId)
@@ -38,7 +38,7 @@ namespace Tier.Business.Concrete
 
         public void Update(Category category)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

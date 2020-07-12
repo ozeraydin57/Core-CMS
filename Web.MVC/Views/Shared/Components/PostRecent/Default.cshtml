@@ -20,7 +20,7 @@
 
                 <p>@item.Post.Summary</p>
 
-                @foreach (var itemCat in item.Caregories)
+                @foreach (var itemCat in item.Caregories.Where(k => k.Type == "category"))
                 {
                     <small class="firstsmall"><a class="bg-orange" href="/Category/Detail/@itemCat.Id" title="">@itemCat.Name</a></small>
                 }
