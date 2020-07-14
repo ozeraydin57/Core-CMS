@@ -24,7 +24,7 @@ namespace Web.MVC.ViewComponents
         {
             var model = new MenuViewModel
             {
-                Menus = _menuService.GetAll()
+                Menus = _menuService.GetAllByType("main")
             };
 
             return View(model);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using Tier.Business.Abstract;
 using Tier.DataAccess.Abstract;
@@ -26,6 +27,10 @@ namespace Tier.Business.Concrete
         public List<Menu> GetAll()
         {
             return _menuDal.GetList().OrderBy(k=>k.OrderNo).ToList();
+        }
+        public List<Menu> GetAllByType(string type)
+        {
+            return _menuDal.GetList(k=>k.Type==type).OrderBy(k => k.OrderNo).ToList();
         }
 
         public Menu GetById(int menuId)

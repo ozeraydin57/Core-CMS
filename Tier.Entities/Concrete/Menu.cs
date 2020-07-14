@@ -12,5 +12,6 @@ namespace Tier.Entities.Concrete
         public string Name { get; set; }
         public string Href { get; set; }
         public int OrderNo { get; set; }
+        public string Type { get; set; }
     }
 }
