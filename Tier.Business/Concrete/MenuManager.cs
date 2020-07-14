@@ -6,6 +6,7 @@ using System.Text;
 using Tier.Business.Abstract;
 using Tier.DataAccess.Abstract;
 using Tier.Entities.Concrete;
+using Tier.Entities.EnType;
 
 namespace Tier.Business.Concrete
 {
@@ -26,11 +27,11 @@ namespace Tier.Business.Concrete
 
         public List<Menu> GetAll()
         {
-            return _menuDal.GetList().OrderBy(k=>k.OrderNo).ToList();
+            return _menuDal.GetList().OrderBy(k => k.OrderNo).ToList();
         }
-        public List<Menu> GetAllByType(string type)
+        public List<Menu> GetAllByType(MenuType type)
         {
-            return _menuDal.GetList(k=>k.Type==type).OrderBy(k => k.OrderNo).ToList();
+            return _menuDal.GetList(k => k.Type == type.ToString()).OrderBy(k => k.OrderNo).ToList();
         }
 
         public Menu GetById(int menuId)
