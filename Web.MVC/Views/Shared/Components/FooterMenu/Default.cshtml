@@ -1,17 +1,12 @@
 ﻿@model MenuViewModel
 <div class="widget">
-    <h2 class="widget-title">Copyrights</h2>
+    <h2 class="widget-title">Kurallar</h2>
     <div class="link-widget">
         <ul>
             @foreach (var item in Model.Menus)
             {
                 <li><a href="@item.Href">@item.Name</a></li>
             }
-            @*<li><a href="/Page/Detail/">About us</a></li>
-            <li><a href="#">Advertising</a></li>
-            <li><a href="#">Write for us</a></li>
-            <li><a href="#">Trademark</a></li>
-            <li><a href="#">License & Help</a></li>*@
         </ul>
     </div><!-- end link-widget -->
 </div><!-- end widget -->
