@@ -5,9 +5,10 @@ using Tier.Entities.Concrete;
 
 namespace Tier.Business.Abstract
 {
-   public interface IPostService
+    public interface IPostService
     {
-        List<PostComplex> GetAll(int skip, int take);
+        List<PostComplex> GetAllComplex(int skip, int take);
+        int GetAllCount();
         PostComplex GetById(int id);
         void Add(Post data);
         void Update(Post data);

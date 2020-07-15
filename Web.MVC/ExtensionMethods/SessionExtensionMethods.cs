@@ -4,20 +4,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Tier.Entities.EnType;
 
 namespace Web.MVC.ExtensionMethods
 {
     public static class SessionExtensionMethods
     {
-        public static void SetObject(this ISession session, string key, object value)
+        public static void SetObject(this ISession session, SessionType key, object value)
         {
             string objectString = JsonConvert.SerializeObject(value);
-            session.SetString(key, objectString);
+            session.SetString(key.ToString(), objectString);
         }
 
-        public static T GetObject<T>(this ISession session, string key) where T : class
+        public static T GetObject<T>(this ISession session, SessionType key) where T : class
         {
-            string objectString = session.GetString(key);
+            string objectString = session.GetString(key.ToString());
             if (string.IsNullOrEmpty(objectString))
                 return null;
 

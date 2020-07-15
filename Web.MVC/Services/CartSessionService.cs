@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tier.Entities.Concrete;
+using Tier.Entities.EnType;
 using Web.MVC.ExtensionMethods;
 
 namespace Web.MVC.Services
@@ -18,18 +19,18 @@ namespace Web.MVC.Services
 
         public Cart GetCart()
         {
-            Cart cart = _httpContextAccessor.HttpContext.Session.GetObject<Cart>("cart");
+            Cart cart = _httpContextAccessor.HttpContext.Session.GetObject<Cart>(SessionType.cart);
             if (cart == null)
             {
-                _httpContextAccessor.HttpContext.Session.SetObject("cart", new Cart());
-                cart = _httpContextAccessor.HttpContext.Session.GetObject<Cart>("cart");
+                _httpContextAccessor.HttpContext.Session.SetObject(SessionType.cart, new Cart());
+                cart = _httpContextAccessor.HttpContext.Session.GetObject<Cart>(SessionType.cart);
             }
             return cart;
         }
 
         public void SetCart(Cart cart)
         {
-            _httpContextAccessor.HttpContext.Session.SetObject("cart", cart);
+            _httpContextAccessor.HttpContext.Session.SetObject(SessionType.cart, cart);
         }
     }
 }

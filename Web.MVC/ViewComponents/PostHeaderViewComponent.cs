@@ -18,7 +18,7 @@ namespace Web.MVC.ViewComponents
         {
             var model = new PostViewModel
             {
-                Posts = _postService.GetAll(0,4).ToList()
+                Posts = _postService.GetAllComplex(0,4).ToList()
             };
 
             return View(model);

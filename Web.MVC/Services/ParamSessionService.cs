@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Tier.Business.Abstract;
 using Tier.Entities.Concrete;
+using Tier.Entities.EnType;
 using Web.MVC.ExtensionMethods;
 
 namespace Web.MVC.Services
@@ -22,11 +23,11 @@ namespace Web.MVC.Services
 
         public Param GetParam(string key)
         {
-            List<Param> setting = _httpContextAccessor.HttpContext.Session.GetObject<List<Param>>("param");
+            List<Param> setting = _httpContextAccessor.HttpContext.Session.GetObject<List<Param>>(SessionType.param);
             if (setting == null)
             {
-                _httpContextAccessor.HttpContext.Session.SetObject("param", _paramService.GetAll());
-                setting = _httpContextAccessor.HttpContext.Session.GetObject<List<Param>>("param");
+                _httpContextAccessor.HttpContext.Session.SetObject(SessionType.param, _paramService.GetAll());
+                setting = _httpContextAccessor.HttpContext.Session.GetObject<List<Param>>(SessionType.param);
             }
             return setting.Where(k=>k.Name== key).FirstOrDefault();
         }

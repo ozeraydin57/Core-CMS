@@ -18,11 +18,10 @@ namespace Web.MVC.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index() //?Page=0&
         {
             return View();
         }
-
 
 
 
