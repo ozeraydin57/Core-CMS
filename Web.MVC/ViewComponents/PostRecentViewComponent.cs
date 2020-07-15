@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ViewComponents;
 using System.Linq;
 using Tier.Business.Abstract;
+using Web.MVC.ExtensionMethods;
 using Web.MVC.Models;
 
 namespace Web.MVC.ViewComponents
@@ -13,15 +14,9 @@ namespace Web.MVC.ViewComponents
 
         public ViewViewComponentResult Invoke(int skip)
         {
-            var query = Request.Query["Page"];
-            int page = 1;
-            if (!string.IsNullOrEmpty(query))
-                int.TryParse(query.ToString(), out page);
-            else
-                page = 1;
-
-            page--;
-
+            int page = Request.Query.GetParamInt("page");
+            if (page > 0)
+                page--;
 
             skip += page * 10;
 
