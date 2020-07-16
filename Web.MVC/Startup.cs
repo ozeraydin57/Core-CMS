@@ -24,7 +24,6 @@ namespace Web.MVC
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllersWithViews();
 
 
@@ -46,6 +45,9 @@ namespace Web.MVC
 
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
+
+            services.AddScoped<IContactService, ContactManager>();
+            services.AddScoped<IContactDal, EfContactDal>();
 
             services.AddSingleton<ICartSessionService, CartSessionService>();
             services.AddSingleton<ICartService, CartService>();

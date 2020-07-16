@@ -21,6 +21,7 @@ namespace Tier.DataAccess.Concrete.EntityFramework
         public DbSet<PostDetail> PostDetail { get; set; }
         public DbSet<PostCategory> PostCategory { get; set; }
         public DbSet<User> User { get; set; }
+        public DbSet<Contact> Contact { get; set; }
 
     }
 }
