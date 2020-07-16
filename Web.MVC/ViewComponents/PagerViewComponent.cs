@@ -14,12 +14,12 @@ namespace Web.MVC.ViewComponents
 
         public ViewViewComponentResult Invoke()
         {
-            var totalCount = _postService.GetAllCount() - 4;
-
+            int totalCount = _postService.GetAllCount() - 4;
+            int page = Request.Query.GetParamInt("page");
             var model = new PagerViewModel
             {
                 TotalPage = (int)Math.Ceiling((decimal)totalCount / 10),
-                Page = Request.Query.GetParamInt("page"),
+                Page = page == 0 ? 1 : page,
                 Take = 10,
             };
             return View(model);
