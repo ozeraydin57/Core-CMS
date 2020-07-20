@@ -31,12 +31,12 @@
                         </div>
                         <div class="col-lg-7">
                             <div class="form-wrapper">
-                                <input type="text" class="form-control" v-model="name" placeholder="Adınız" />
-                                <input type="text" class="form-control" v-model="email" placeholder="E-Posta adresiniz" />
+                                <input type="text" class="form-control" v-model="name" placeholder="Adınız *" />
+                                <input type="text" class="form-control" v-model="email" placeholder="E-Posta adresiniz *" />
                                 <input type="text" class="form-control" v-model="phone" placeholder="Telefon" />
                                 <input type="text" class="form-control" v-model="subject" placeholder="Konu" />
-                                <textarea class="form-control" v-model="message" placeholder="Mesajınız"></textarea>
-                                <button :disabled="disabledButton==true" class="btn btn-primary" v-on:click="sendMessage">Gönder <i class="fa fa-envelope-open-o"></i></button>
+                                <textarea class="form-control" v-model="message" placeholder="Mesajınız *"></textarea>
+                                <button :disabled="disabledButton==true" class="btn btn-primary " v-on:click="sendMessage">Gönder <i class="fa fa-envelope-open-o"></i></button>
                             </div>
                         </div>
                     </div>
@@ -44,49 +44,11 @@
             </div><!-- end col -->
         </div><!-- end row -->
     </div><!-- end container -->
-    <div class="alert alert-success" style="display:none;">
+    <div class="alertSucc alert alert-success mt-2" style="display:none;">
         <strong> {{response.message}} </strong>
     </div>
+    <div class="alertErr alert alert-danger mt-2" style="display:none;">
+        <strong> {{error}} </strong>
+    </div>
 </section>
-
-<script>
-    var app = new Vue({
-        el: '#vueApp',
-        data: {
-            name: '',
-            email: '',
-            phone: '',
-            subject: '',
-            message: '',
-            response: '',
-            disabledButton: false
-        },
-        methods: {
-            sendMessage: function () {
-                this.disabledButton = true;
-                this.response = "Mesajınız iletiliyor.."
-
-                $.ajax({
-                    method: "post",
-                    url: "/Contact/Create",
-                    data: {
-                        Name: this.name,
-                        Email: this.email,
-                        Phone: this.phone,
-                        Subject: this.subject,
-                        message: this.message,
-                    },
-                    success: (data) => {
-                        console.log(data);
-                        if (data.success)
-                            this.response = data;
-                        else
-                            this.disabledButton = false;
-                        $('.alert').fadeIn();
-                    }
-                });
-            }
-        }
-    })
-    //app.message = 'Bye!'
-</script>
+<script src="~/js/vuejs/ContactVj.js"></script>

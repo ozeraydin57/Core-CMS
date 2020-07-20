@@ -17,8 +17,4 @@
     <ProjectReference Include="..\Tier.Entities\Tier.Entities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\js\vuejs\" />
-  </ItemGroup>
-
 </Project>
