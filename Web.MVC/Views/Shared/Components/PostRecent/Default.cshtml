@@ -1,8 +1,6 @@
 ﻿@model PostViewModel
 
-
 <div class="blog-list clearfix">
-
     @foreach (var item in Model.Posts)
     {
         <div class="blog-box row">
@@ -29,7 +27,6 @@
                 <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> @item.PostDetail.ReadCount</a></small>
             </div><!-- end meta -->
         </div><!-- end blog-box -->
-
         <hr class="invis">
     }
 </div>

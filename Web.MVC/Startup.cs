@@ -49,6 +49,10 @@ namespace Web.MVC
             services.AddScoped<IContactService, ContactManager>();
             services.AddScoped<IContactDal, EfContactDal>();
 
+            services.AddScoped<IPostCommentService, PostCommentManager>();
+            services.AddScoped<IPostCommentDal, EfPostCommentDal>();
+
+
             services.AddSingleton<ICartSessionService, CartSessionService>();
             services.AddSingleton<ICartService, CartService>();
 

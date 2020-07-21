@@ -20,8 +20,8 @@ namespace Tier.DataAccess.Concrete.EntityFramework
         public DbSet<Post> Post { get; set; }
         public DbSet<PostDetail> PostDetail { get; set; }
         public DbSet<PostCategory> PostCategory { get; set; }
+        public DbSet<PostComment> PostComment { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<Contact> Contact { get; set; }
-
     }
 }

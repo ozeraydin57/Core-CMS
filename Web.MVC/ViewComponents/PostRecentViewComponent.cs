@@ -20,8 +20,6 @@ namespace Web.MVC.ViewComponents
 
             skip += page * 10;
 
-
-
             var model = new PostViewModel
             {
                 Posts = _postService.GetAllComplex(skip, 10).ToList()

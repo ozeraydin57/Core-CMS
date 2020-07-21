@@ -18,10 +18,19 @@ namespace Web.MVC.ViewComponents
         {
             var model = new PostViewModel
             {
-                Posts = _postService.GetAllComplex(0,4).ToList()
+                Posts = _postService.GetAllComplex(0, 4).ToList()
             };
 
             return View(model);
         }
+        //public Task<IViewComponentResult> InvokeAsync()
+        //{
+        //    var model = new PostViewModel
+        //    {
+        //        Posts = _postService.GetAllComplex(0, 4).ToList()
+        //    };
+
+        //    return Task.FromResult<IViewComponentResult>(View(model));
+        //}
     }
 }

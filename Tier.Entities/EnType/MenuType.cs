@@ -6,7 +6,7 @@ namespace Tier.Entities.EnType
 {
     public enum MenuType
     {
-        main=1,
-        footer=2,
+        main = 1,
+        footer = 2,
     }
 }
