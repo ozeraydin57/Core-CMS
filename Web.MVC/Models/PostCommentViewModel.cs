@@ -6,8 +6,8 @@ using Tier.Entities.Concrete;
 
 namespace Web.MVC.Models
 {
-    public class PostCommentViewModel : ResponseModel
+    public class PostCommentViewModel : ResponseModel <int>
     {
-        public PostComment Comment { get; set; }
+        public List<PostComment> Comment { get; set; }
     }
 }

@@ -13,12 +13,10 @@ namespace Web.MVC.ViewComponents
     {
         public ViewViewComponentResult Invoke(int postId)
         {
-            var model = new PostCommentViewModel
+            var model = new ResponseModel<int>
             {
-                Comment = new PostComment
-                {
-                    PostId = postId
-                }
+                Success = true,
+                Data = postId
             };
 
             return View(model);

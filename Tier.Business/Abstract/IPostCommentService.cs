@@ -10,6 +10,7 @@ namespace Tier.Business.Abstract
    public interface IPostCommentService
     {
         List<PostComment> GetAll();
+        List<PostComment> GetAllByPostId(int postId);
         void Add(PostComment data);
         void Update(PostComment data);
         void Delete(int id);

@@ -18,6 +18,7 @@
          
                 this.disabledButton = true;
                 this.response = "Mesajınız iletiliyor.."
+
                 $.ajax({
                     method: "post",
                     url: "/Contact/Create",
@@ -38,6 +39,7 @@
                         $('.alertErr').hide();
                     }
                 });
+
             }
         },
         checkForm: function () {

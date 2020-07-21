@@ -6,8 +6,8 @@ using Tier.Entities.Concrete;
 
 namespace Web.MVC.Models
 {
-    public class ContactViewModel :ResponseModel
+    public class ContactViewModel : ResponseModel<Contact>
     {
-        public Contact  Contact { get; set; }
+        public Contact Contact { get; set; }
     }
 }

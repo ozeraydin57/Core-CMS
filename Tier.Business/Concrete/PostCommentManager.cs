@@ -29,7 +29,12 @@ namespace Tier.Business.Concrete
         public List<PostComment> GetAll()
         {
             //throw new NotImplementedException();
-            return _contactDal.GetList().OrderByDescending(k=>k.CreateDate).ToList();
+            return _contactDal.GetList().OrderByDescending(k => k.CreateDate).ToList();
+        }
+
+        public List<PostComment> GetAllByPostId(int postId)
+        {
+            return _contactDal.GetList(k => k.PostId == postId).OrderByDescending(k => k.CreateDate).ToList();
         }
 
         public PostComment GetById(int id)

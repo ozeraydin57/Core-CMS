@@ -1,5 +1,5 @@
 ﻿var app = new Vue({
-    el: '#vueComment',
+    el: '#vueCommentCreate',
     data: {
         name: null,
         email: null,
@@ -16,7 +16,8 @@
             if (this.checkForm()) {
 
                 this.disabledButton = true;
-                this.response = "Yorumunuz iletiliyor.."
+                this.response = "Yorumunuz iletiliyor..";
+
                 $.ajax({
                     method: "post",
                     url: "/PostComment/Create",
@@ -28,7 +29,6 @@
                         Comment: this.comment,
                     },
                     success: (data) => {
-                        console.log(data);
                         if (data.success)
                             this.response = data;
                         else
@@ -37,6 +37,7 @@
                         $('.alertErr').hide();
                     }
                 });
+
             }
         },
         checkForm: function () {

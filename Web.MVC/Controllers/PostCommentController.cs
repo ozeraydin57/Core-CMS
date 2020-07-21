@@ -12,8 +12,8 @@ namespace Web.MVC.Controllers
 {
     public class PostCommentController : Controller
     {
-        private IPostCommentService _contactService;
-        public PostCommentController(IPostCommentService contactService) => _contactService = contactService;
+        private IPostCommentService _postService;
+        public PostCommentController(IPostCommentService postService) => _postService = postService;
 
         public IActionResult Index()
         {
@@ -29,19 +29,33 @@ namespace Web.MVC.Controllers
                 PostId = int.Parse(collection["PostId"].ToString()),
                 Name = collection["Name"].ToString(),
                 Email = collection["Email"].ToString(),
-                Comment = collection["Phone"].ToString(),
+                Comment = collection["Comment"].ToString(),
                 Web = collection["Web"].ToString(),
                 CreateDate = DateTime.Now
             };
+            _postService.Add(data);
 
-            _contactService.Add(data);
-
-            var response = new PostCommentViewModel
+            var response = new ResponseModel<int>
             {
-                Comment = data,
+                Success = true,
+                Message = "Yorumunuz alımıştır, onay sürecinden geçtikten sonra eklenecektir."
+            };
+
+            return Ok(response);
+        }
+        [HttpPost]
+        public IActionResult List(int postId)
+        {
+            //var postId = int.Parse(collection["PostId"].ToString());
+            var list = _postService.GetAllByPostId(postId);
+
+            var response = new ResponseModel<List<PostComment>>
+            {
+                Data=list,
                 Success = true,
                 Message = "Yorumunuz alımıştır, kısa bir onay sürecinden geçtikten sonra eklenecektir."
             };
+
 
             return Ok(response);
         }

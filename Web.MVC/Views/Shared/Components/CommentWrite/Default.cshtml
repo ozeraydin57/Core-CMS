@@ -1,5 +1,6 @@
-﻿@model PostCommentViewModel
-<div class="custombox clearfix" id="vueComment">
+﻿@model Tier.Entities.Concrete.ResponseModel<int>
+
+<div class="custombox clearfix" id="vueCommentCreate">
     <h4 class="small-title">Leave a Reply</h4>
     <div class="row">
         <div class="col-lg-12">
@@ -8,7 +9,7 @@
                 <input type="text" class="form-control" v-model="email" placeholder="E-Posta adresiniz *">
                 <input type="text" class="form-control" v-model="web" placeholder="Website">
                 <textarea class="form-control" v-model="comment" placeholder="Yorumunuz *"></textarea>
-                <button class="btn btn-primary" :disabled="disabledButton==true" v-on:click="sendComment(@Model.Comment.PostId)">Gönder</button>
+                <button class="btn btn-primary" :disabled="disabledButton==true" v-on:click="sendComment(@Model.Data)">Gönder</button>
             </div>
         </div>
     </div>
@@ -19,4 +20,4 @@
         <strong> {{error}} </strong>
     </div>
 </div>
-<script src="~/js/vuejs/CommentVj.js"></script>
+<script src="~/js/vuejs/CommentCreateVj.js"></script>
