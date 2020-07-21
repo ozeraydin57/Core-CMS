@@ -1,22 +1,25 @@
-﻿<div class="custombox clearfix" id="vueCommentList">
-    <h4 class="small-title">3 Comments</h4>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="comments-list">
+﻿@model Tier.Entities.Concrete.ResponseModel<int>
 
-                <div class="media" v-for="item in data">
-                    <a class="media-left" href="#">
-                        <img src="/upload/author.jpg" alt="" class="rounded-circle">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading user_name">{{item.name}} <small>{{item.createDate}}</small></h4>
-                        <p>{{item.comment}}</p>
-                        <a href="#" class="btn btn-primary btn-sm">Cevapla</a>
+    <div class="custombox clearfix" id="vueCommentList">
+        {{listComment(@Model.Data)}}
+        <h4 class="small-title">Yorumlar</h4>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="comments-list">
+
+                    <div class="media" v-for="item in data">
+                        <a class="media-left" href="#">
+                            <img src="/upload/author.jpg" alt="" class="rounded-circle">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading user_name">{{item.name}} <small>{{item.createDate}}</small></h4>
+                            <p>{{item.comment}}</p>
+                            <a href="#" class="btn btn-primary btn-sm">Cevapla</a>
+                        </div>
                     </div>
-                </div>
 
-            </div>
-        </div><!-- end col -->
-    </div><!-- end row -->
-</div><!-- end custom-box -->
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end custom-box -->
 <script src="~/js/vuejs/CommentListVj.js"></script>
