@@ -1,8 +1,8 @@
 ﻿@model Tier.Entities.Concrete.ResponseModel<int>
 
     <div class="custombox clearfix" id="vueCommentList">
-        {{listComment(@Model.Data)}}
-        <h4 class="small-title">Yorumlar</h4>
+ 
+        <h4 class="small-title" id="postId" data-title="@Model.Data">Yorumlar</h4>
         <div class="row">
             <div class="col-lg-12">
                 <div class="comments-list">
@@ -17,7 +17,6 @@
                             <a href="#" class="btn btn-primary btn-sm">Cevapla</a>
                         </div>
                     </div>
-
                 </div>
             </div><!-- end col -->
         </div><!-- end row -->

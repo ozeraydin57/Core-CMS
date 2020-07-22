@@ -1,17 +1,17 @@
 ﻿var app = new Vue({
     el: '#vueCommentList',
     data: {
-        response: '',
+        postId: document.getElementById('postId').dataset.title,
         data: {},
         error: null
     },
     methods: {
-        listComment: function (postId) {
+        listComment: function () {
             $.ajax({
                 method: "post",
                 url: "/PostComment/List",
                 data: {
-                    postId: postId,
+                    postId: this.postId,
                 },
                 success: (data) => {
                     if (data.success)
@@ -21,7 +21,6 @@
         }
     },
     mounted: function () {
-        //this.listComment(30)
+        this.listComment();
     }
-
 })

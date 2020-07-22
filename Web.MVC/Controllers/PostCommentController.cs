@@ -43,6 +43,7 @@ namespace Web.MVC.Controllers
 
             return Ok(response);
         }
+
         [HttpPost]
         public IActionResult List(int postId)
         {
@@ -53,7 +54,7 @@ namespace Web.MVC.Controllers
             {
                 Data=list,
                 Success = true,
-                Message = "Yorumunuz alımıştır, kısa bir onay sürecinden geçtikten sonra eklenecektir."
+                Message = "Yorum Listesi"
             };
 
 
