@@ -7,7 +7,7 @@
     },
     methods: {
         listComment: function () {
-            $.ajax({
+            $.ajax({   
                 method: "post",
                 url: "/PostComment/List",
                 data: {

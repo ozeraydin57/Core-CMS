@@ -29,7 +29,12 @@ namespace Web.MVC.Services
                 _httpContextAccessor.HttpContext.Session.SetObject(SessionType.param, _paramService.GetAll());
                 setting = _httpContextAccessor.HttpContext.Session.GetObject<List<Param>>(SessionType.param);
             }
-            return setting.Where(k=>k.Name== key).FirstOrDefault();
+            var ret = setting.Where(k => k.Name == key).FirstOrDefault();
+            if (ret != null)
+                return ret;
+            else
+                return new Param(); 
+
         }
     }
 }

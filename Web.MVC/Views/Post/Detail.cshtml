@@ -1,10 +1,6 @@
 ﻿@model PostViewModel
 @{
     var Post = Model.Posts.FirstOrDefault();
-
-    ViewData["Title"] = Post.Post.Title;
-    ViewData["keyword"] = Post.PostDetail.MetaKeyword;
-    ViewData["description"] = Post.PostDetail.MetaDescription;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 

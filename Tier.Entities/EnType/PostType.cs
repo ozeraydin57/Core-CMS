@@ -4,9 +4,12 @@ using System.Text;
 
 namespace Tier.Entities.EnType
 {
-    public enum MenuType
+  public enum PostType
+
     {
-        main ,
-        footer,
+        post,
+        page,
+        product,
+        activity
     }
 }

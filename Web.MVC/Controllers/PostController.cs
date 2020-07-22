@@ -25,11 +25,14 @@ namespace Web.MVC.Controllers
         public ActionResult Detail(int id)
         {
             var posts = new List<PostComplex>();
-
-            posts.Add(_postService.GetById(id));
+            var post = _postService.GetById(id);
+            posts.Add(post);
             var model = new PostViewModel
             {
-                Posts = posts
+                Posts = posts,
+                Title = post.PostDetail.MetaTitle,
+                Description = post.PostDetail.MetaDescription,
+                Keywords = post.PostDetail.MetaKeyword,
             };
 
             return View(model);

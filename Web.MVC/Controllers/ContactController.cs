@@ -18,7 +18,13 @@ namespace Web.MVC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var model = new ContactViewModel
+            {
+                Title = "İletişim bilgilerimiz.",
+                Description = "İletişim bilgilerimiz.",
+                Keywords = "İletişim bilgilerimiz.",
+            };
+            return View(model);
         }
 
         [HttpPost]
@@ -41,7 +47,12 @@ namespace Web.MVC.Controllers
             {
                 Contact = data,
                 Success = true,
-                Message = "Mesajınız ilgili kişilere iletilmiştir."
+                Message = "Mesajınız ilgili kişilere iletilmiştir.",
+                Title = "İletişim bilgilerimiz.",
+                Description = "İletişim bilgilerimiz.",
+                Keywords = "İletişim bilgilerimiz.",
+
+
             };
 
             return Ok(response);

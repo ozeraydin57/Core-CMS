@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@model Tier.Entities.ComplexType.BaseViewModel
+<!DOCTYPE html>
+<html lang="tr">
 <head>
     <!-- Basic -->
     <meta charset="utf-8" />
@@ -9,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Site Metas -->
-    <title>@ViewData["Title"]</title>
-    <meta name="keywords" content="@ViewData["keywords"]">
-    <meta name="description" content="@ViewData["description"]">
-    <meta name="author" content="@ViewData["author"]">
+    <title>@Model.Title</title>
+    <meta name="keywords" content="@Model.Keywords">
+    <meta name="description" content="@Model.Description">
+    <meta name="author" content="@Model.Author">
 
     <!-- Site Icons -->
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
