@@ -7,7 +7,7 @@
             <div class="col-md-4">
                 <div class="post-media">
                     <a href="/Post/Detail/@item.Post.Id" title="@item.Post.Title">
-                        <img src="upload/tech_blog_01.jpg" alt="" class="img-fluid">
+                        <img src="/upload/tech_blog_01.jpg" alt="" class="img-fluid">
                         <div class="hovereffect"></div>
                     </a>
                 </div><!-- end media -->
@@ -22,11 +22,11 @@
                 {
                     <small class="firstsmall"><a class="bg-orange" href="/Category/@itemCat.Id" title="">@itemCat.Name</a></small>
                 }
-                <small><a href="tech-single.html" title="">@item.Post.CreateDate</a></small>
+                <small><a href="#" title="">@item.Post.CreateDate</a></small>
                 <small><a href="/Author/Detail/@item.Post.UserId" title="">@item.User.FullName</a></small>
-                <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> @item.PostDetail.ReadCount</a></small>
+                <small><a href="#" title=""><i class="fa fa-eye"></i>@item.PostDetail.ReadCount</a></small>
             </div><!-- end meta -->
         </div><!-- end blog-box -->
-        <hr class="invis">
+        <hr class="invis"/>
     }
 </div>

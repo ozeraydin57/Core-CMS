@@ -30,7 +30,7 @@ namespace Tier.Business.Concrete
 
         public int GetAllCount()
         {
-            return _postDal.GetList().Count;
+            return _postDal.GetList(k=>k.IsActive==true).Count;
         }
         public List<PostComplex> GetAllComplex(int skip, int take)
         {
