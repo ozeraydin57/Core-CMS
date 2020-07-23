@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Tier.Business.Abstract;
 using Tier.Entities.Concrete;
 using Web.MVC.Models;
+using Web.MVC.Services;
 
 namespace Web.MVC.Controllers
 {
@@ -14,15 +15,21 @@ namespace Web.MVC.Controllers
     {
 
         private IContactService _contactService;
-        public ContactController(IContactService contactService) => _contactService = contactService;
+        private IParamSessionService _paramSessionService;
+        public ContactController(IContactService contactService, IParamSessionService paramSessionService)
+        {
+            _contactService = contactService;
+            _paramSessionService = paramSessionService;
+        }
 
         public IActionResult Index()
         {
             var model = new ContactViewModel
             {
-                Title = "İletişim bilgilerimiz.",
-                Description = "İletişim bilgilerimiz.",
-                Keywords = "İletişim bilgilerimiz.",
+                Title = _paramSessionService.GetParam("Title").Description,
+                Description = _paramSessionService.GetParam("Description").Description,
+                Keywords = _paramSessionService.GetParam("Keywords").Description,
+                Author = _paramSessionService.GetParam("Author").Description,
             };
             return View(model);
         }
@@ -48,11 +55,6 @@ namespace Web.MVC.Controllers
                 Contact = data,
                 Success = true,
                 Message = "Mesajınız ilgili kişilere iletilmiştir.",
-                Title = "İletişim bilgilerimiz.",
-                Description = "İletişim bilgilerimiz.",
-                Keywords = "İletişim bilgilerimiz.",
-
-
             };
 
             return Ok(response);
