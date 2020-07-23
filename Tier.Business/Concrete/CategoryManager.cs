@@ -16,29 +16,29 @@ namespace Tier.Business.Concrete
             _categoryDal = categoryDal;
         }
 
-        public void Add(Category category)
+        public void Add(Category data)
         {
-           
+
         }
 
-        public void Delete(int categoryId)
+        public void Delete(int id)
         {
-            
+
         }
 
         public List<Category> GetAll(string type)
         {
-            return _categoryDal.GetList(k=>k.Type==type);
+            return _categoryDal.GetList(k => k.Type == type);
         }
 
-        public List<Category> GetByCategoryId(int categoryId)
+        public Category GetById(int id)
         {
-            throw new NotImplementedException();
+            return _categoryDal.Get(k => k.Id == id);
         }
 
-        public void Update(Category category)
+        public void Update(Category data)
         {
-            
+
         }
     }
 }

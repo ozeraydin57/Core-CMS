@@ -15,7 +15,6 @@ namespace Web.MVC.Services
 
         public void Login(string userName, string password)
         {
-
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, userName)
@@ -25,7 +24,6 @@ namespace Web.MVC.Services
 
             ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
             var asd = _httpContextAccessor.HttpContext.SignInAsync(principal);
-
         }
     }
 }

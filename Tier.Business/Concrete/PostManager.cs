@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Tier.Business.Abstract;
 using Tier.DataAccess.Abstract;
@@ -35,11 +36,15 @@ namespace Tier.Business.Concrete
         {
             return _postDal.GetListComplex(skip, take);
         }
+        public List<PostComplex> GetAllComplexByCategoryId(int skip, int take,int categoryId)
+        {
+            return _postDal.GetListComplexByCategoryId(skip, take, categoryId);
+        }
+
         public PostComplex GetById(int id)
         {
             return _postDal.GetComplex(k=>k.Post.Id==id);
         }
-
 
         public List<Post> GetByAuthorId(int id)
         {

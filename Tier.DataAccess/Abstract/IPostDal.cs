@@ -10,6 +10,7 @@ namespace Tier.DataAccess.Abstract
     {
         //özel sorgu lazım olacak
         List<PostComplex> GetListComplex(int skip,int take, Expression<Func<PostComplex, bool>> filter = null);
+        List<PostComplex> GetListComplexByCategoryId(int skip,int take, int categoryId, Expression<Func<PostComplex, bool>> filter = null);
         PostComplex GetComplex(Expression<Func<PostComplex, bool>> filter = null);
     }
 }

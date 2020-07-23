@@ -9,23 +9,23 @@ using Web.MVC.Models;
 
 namespace Web.MVC.ViewComponents
 {
-    public class CategoryListViewComponent : ViewComponent
-    {
-        private ICategoryService _categoryService;
-        public CategoryListViewComponent(ICategoryService categoryService)
-        {
-            _categoryService = categoryService;
-        }
+    //public class CategoryListViewComponent : ViewComponent
+    //{
+    //    //private ICategoryService _categoryService;
+    //    //public CategoryListViewComponent(ICategoryService categoryService)
+    //    //{
+    //    //    _categoryService = categoryService;
+    //    //}
 
-        public ViewViewComponentResult Invoke()
-        {
-            var list = _categoryService.GetAll("category");
-            var model = new CategoryListViewModel
-            {
-                Categories=list,
-                CurrentCategory=Convert.ToInt32(HttpContext.Request.Query["category"])
-            };
-            return View(model);
-        }
-    }
+    //    //public ViewViewComponentResult Invoke()
+    //    //{
+    //    //    var list = _categoryService.GetAll("category");
+    //    //    var model = new CategoryViewModel
+    //    //    {
+    //    //        Categories=list,
+    //    //        CurrentCategory=Convert.ToInt32(HttpContext.Request.Query["category"])
+    //    //    };
+    //    //    return View(model);
+    //    //}
+    //}
 }

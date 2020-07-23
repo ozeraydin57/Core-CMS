@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ViewComponents;
 using System;
 using Tier.Business.Abstract;
+using Tier.Entities.Concrete;
 using Web.MVC.ExtensionMethods;
 using Web.MVC.Models;
 
@@ -12,9 +13,16 @@ namespace Web.MVC.ViewComponents
         private IPostService _postService;
         public PagerViewComponent(IPostService postService) => _postService = postService;
 
-        public ViewViewComponentResult Invoke()
+        public ViewViewComponentResult Invoke(int categoryId)
         {
-            int totalCount = _postService.GetAllCount() - 4;
+
+            int totalCount;
+
+            if (categoryId > 0)
+                totalCount = _postService.GetAllComplexByCategoryId(0, 10000, categoryId).Count;
+            else
+                totalCount = _postService.GetAllCount() - 4;
+
             int page = Request.Query.GetParamInt("page");
             var model = new PagerViewModel
             {

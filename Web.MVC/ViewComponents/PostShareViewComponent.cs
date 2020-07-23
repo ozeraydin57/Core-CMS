@@ -13,6 +13,5 @@ namespace Web.MVC.ViewComponents
         {
             return View();
         }
-
     }
 }

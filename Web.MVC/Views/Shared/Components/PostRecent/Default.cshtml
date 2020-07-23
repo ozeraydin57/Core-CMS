@@ -20,7 +20,7 @@
 
                 @foreach (var itemCat in item.Caregories.Where(k => k.Type == "category"))
                 {
-                    <small class="firstsmall"><a class="bg-orange" href="/Category/Detail/@itemCat.Id" title="">@itemCat.Name</a></small>
+                    <small class="firstsmall"><a class="bg-orange" href="/Category/@itemCat.Id" title="">@itemCat.Name</a></small>
                 }
                 <small><a href="tech-single.html" title="">@item.Post.CreateDate</a></small>
                 <small><a href="/Author/Detail/@item.Post.UserId" title="">@item.User.FullName</a></small>

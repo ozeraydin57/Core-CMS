@@ -18,7 +18,7 @@
                         <span class="color-orange">
                             @foreach (var item in Post.Caregories.Where(k => k.Type == "category"))
                             {
-                                <a href="/Category/Detail/@item.Id" title="">@item.Name</a>
+                                <a href="/Category/@item.Id" title="">@item.Name</a>
                             }
                         </span>
 

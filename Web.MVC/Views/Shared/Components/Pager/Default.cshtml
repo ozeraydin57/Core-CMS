@@ -3,7 +3,7 @@
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-start">
         <li class="page-item">
-            <a class="page-link" href="/Home?page=@(Model.Page -1)">Önceki</a>
+            <a class="page-link" href="?page=@(Model.Page -1)">Önceki</a>
         </li>
         @{
             string cssClass = "";
@@ -16,12 +16,12 @@
                 }
                 if (Model.Page == i)
                     cssClass = "navbar-inverse";
-                <li class="page-item"><a class="page-link @cssClass" href="/Home?page=@i">@i</a></li>
+                <li class="page-item"><a class="page-link @cssClass" href="?page=@i">@i</a></li>
                 cssClass = "";
             }
         }
         <li class="page-item">
-            <a class="page-link" href="/Home?page=@(Model.Page +1)">Sonraki</a>
+            <a class="page-link" href="?page=@(Model.Page +1)">Sonraki</a>
         </li>
     </ul>
 </nav>

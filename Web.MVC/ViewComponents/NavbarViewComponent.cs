@@ -13,14 +13,11 @@ namespace Web.MVC.ViewComponents
 {
     public class NavbarViewComponent : ViewComponent
     {
-
         private IMenuService _menuService;
         public NavbarViewComponent(IMenuService menuService)
         {
             _menuService = menuService;
         }
-
-
         public ViewViewComponentResult Invoke()
         {
             var model = new MenuViewModel

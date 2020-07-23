@@ -6,9 +6,9 @@ namespace Tier.Business.Abstract
     public interface ICategoryService
     {
         List<Category> GetAll(string type);
-        List<Category> GetByCategoryId(int categoryId);
-        void Add(Category category);
-        void Update(Category category);
-        void Delete(int categoryId);
+        Category GetById(int id);
+        void Add(Category data);
+        void Update(Category data);
+        void Delete(int id);
     }
 }

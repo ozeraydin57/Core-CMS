@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Tier.Entities.ComplexType;
 using Tier.Entities.Concrete;
 
 namespace Web.MVC.Models
 {
-    public class CategoryListViewModel
+    public class CategoryViewModel : BaseViewModel
     {
-        public List<Category> Categories { get; internal set; }
-        public int CurrentCategory { get; internal set; }
+        public Category Category { get; set; }
     }
 }

@@ -29,7 +29,6 @@ namespace Web.MVC.ViewComponents
         //    {
         //        Posts = _postService.GetAllComplex(0, 4).ToList()
         //    };
-
         //    return Task.FromResult<IViewComponentResult>(View(model));
         //}
     }
