@@ -266,7 +266,7 @@ h5 {
 
 .authorbox p a,
 .pp a,
-.blog-top .fa-rss,
+.blog-top .fa-rss, .fa-history,
 a:hover,
 a:focus {
     color: #FF6347 !important;

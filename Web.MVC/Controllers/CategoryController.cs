@@ -25,7 +25,7 @@ namespace Web.MVC.Controllers
         public ActionResult Index(int categoryId)
         {
             var cat = _categoryService.GetById(categoryId);
-
+            
             var model = new CategoryViewModel
             {
                 Title = cat.Name,
