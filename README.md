@@ -2,7 +2,8 @@
 
 Asp .net core 3.1 mvc ile hazırlanan içerik yönetim sistemi.
 
-Proje çok katmanlı mimari patternine göre ilerleyip .net core özelliklerini kullanmayı hedeflemektedir.
+Proje backend de çok katmanlı mimari patternine göre ilerleyip .net core özelliklerini kullanmayı ve frontend de vuejs ile ilerlenmesi hedeflemektedir.
+
 
 ## Olacak olan özellikleri
 
