@@ -9,13 +9,17 @@ namespace Tier.Business.Abstract
     {
         List<PostComplex> GetAllComplex(int skip, int take);
         List<PostComplex> GetAllComplexByCategoryId(int skip, int take, int categoryId);
+        PostComplex GetComplexById(int id);
+
         int GetAllCount();
-        PostComplex GetById(int id);
+        
         void Add(Post data);
         void Update(Post data);
         void Delete(int id);
         List<Post> GetByCategoryId(int id);
         List<Post> GetByAuthorId(int id);
+
+        Post GetById(int id);
 
     }
 }

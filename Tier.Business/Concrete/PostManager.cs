@@ -11,11 +11,9 @@ namespace Tier.Business.Concrete
     public class PostManager : IPostService
     {
         private IPostDal _postDal;
-        private IPostDetailDal _postDetailDal;
-        public PostManager(IPostDal postDal, IPostDetailDal postDetailDal)
+        public PostManager(IPostDal postDal)
         {
             this._postDal = postDal;
-            this._postDetailDal = postDetailDal;
         }
 
         public void Add(Post data)
@@ -30,20 +28,20 @@ namespace Tier.Business.Concrete
 
         public int GetAllCount()
         {
-            return _postDal.GetList(k=>k.IsActive==true).Count;
+            return _postDal.GetList(k => k.IsActive == true).Count;
         }
         public List<PostComplex> GetAllComplex(int skip, int take)
         {
             return _postDal.GetListComplex(skip, take);
         }
-        public List<PostComplex> GetAllComplexByCategoryId(int skip, int take,int categoryId)
+        public List<PostComplex> GetAllComplexByCategoryId(int skip, int take, int categoryId)
         {
             return _postDal.GetListComplexByCategoryId(skip, take, categoryId);
         }
 
-        public PostComplex GetById(int id)
+        public PostComplex GetComplexById(int id)
         {
-            return _postDal.GetComplex(k=>k.Post.Id==id);
+            return _postDal.GetComplex(k => k.Post.Id == id);
         }
 
         public List<Post> GetByAuthorId(int id)
@@ -58,7 +56,12 @@ namespace Tier.Business.Concrete
 
         public void Update(Post data)
         {
-            throw new NotImplementedException();
+            _postDal.Update(data);
+        }
+
+        public Post GetById(int id)
+        {
+            return _postDal.Get(k => k.Id == id);
         }
     }
 }

@@ -89,7 +89,7 @@ namespace Web.MVC
             app.UseAuthentication();//
             app.UseAuthorization();
 
-
+            app.UseCookiePolicy();
             app.UseSession();
 
             app.UseEndpoints(endpoints =>

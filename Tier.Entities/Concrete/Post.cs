@@ -16,5 +16,12 @@ namespace Tier.Entities.Concrete
         public string Type { get; set; }
         public bool IsActive { get; set; }
         public string ImagePath { get; set; }
+
+        public int ReadCount { get; set; }
+        public int LikeCount { get; set; }
+        public int UnlikeCount { get; set; }
+        public string MetaTitle { get; set; }
+        public string MetaKeyword { get; set; }
+        public string MetaDescription { get; set; }
     }
 }

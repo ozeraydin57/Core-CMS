@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Tier.Business.Abstract;
 using Tier.Entities.Concrete;
+using Web.MVC.ExtensionMethods;
 using Web.MVC.Models;
 using Web.MVC.Services;
 
@@ -30,15 +31,25 @@ namespace Web.MVC.Controllers
         // GET: PostController/Details/5
         public ActionResult Detail(int id)
         {
+            var postId = Request.Cookies.GetValue("Post" + id.ToString());
+            if (string.IsNullOrEmpty(postId))
+            {
+                var tmpPost = _postService.GetById(id);
+                tmpPost.ReadCount += 1;
+                _postService.Update(tmpPost);
+                Response.Cookies.SetValue("Post" + id.ToString());
+            }
+
+
             var posts = new List<PostComplex>();
-            var post = _postService.GetById(id);
+            var post = _postService.GetComplexById(id);
             posts.Add(post);
             var model = new PostViewModel
             {
                 Posts = posts,
-                Title = post.PostDetail.MetaTitle ?? post.Post.Title,
-                Description = post.PostDetail.MetaDescription ?? post.Post.Summary,
-                Keywords = post.PostDetail.MetaKeyword ?? post.Post.Title,
+                Title = post.Post.MetaTitle ?? post.Post.Title,
+                Description = post.Post.MetaDescription ?? post.Post.Summary,
+                Keywords = post.Post.MetaKeyword ?? post.Post.Title,
                 Author = _paramSessionService.GetParam("Author").Description,
             };
 
