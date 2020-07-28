@@ -57,7 +57,6 @@ namespace Web.MVC.Controllers
                 Message = "Yorum Listesi"
             };
 
-
             return Ok(response);
         }
     }

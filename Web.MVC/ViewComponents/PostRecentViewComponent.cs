@@ -13,7 +13,7 @@ namespace Web.MVC.ViewComponents
         private IPostService _postService;
         public PostRecentViewComponent(IPostService postService) => _postService = postService;
 
-        public ViewViewComponentResult Invoke(int skip, int categoryId)
+        public ViewViewComponentResult Invoke(int skip, int categoryId, int userId)
         {
             int page = Request.Query.GetParamInt("page");
             if (page > 0)
@@ -25,6 +25,8 @@ namespace Web.MVC.ViewComponents
 
             if (categoryId > 0)
                 model.Posts = _postService.GetAllComplexByCategoryId(skip, 10, categoryId).ToList();
+            else if (userId > 0)
+                model.Posts = _postService.GetAllComplexByUserId(skip, 10, userId).ToList();
             else
                 model.Posts = _postService.GetAllComplex(skip, 10).ToList();
 

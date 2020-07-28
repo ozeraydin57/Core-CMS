@@ -9,6 +9,7 @@ namespace Tier.Business.Abstract
     {
         List<PostComplex> GetAllComplex(int skip, int take);
         List<PostComplex> GetAllComplexByCategoryId(int skip, int take, int categoryId);
+        List<PostComplex> GetAllComplexByUserId(int skip, int take, int userId);
         PostComplex GetComplexById(int id);
 
         int GetAllCount();

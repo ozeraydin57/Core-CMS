@@ -40,7 +40,6 @@ namespace Web.MVC.Controllers
                 Response.Cookies.SetValue("Post" + id.ToString());
             }
 
-
             var posts = new List<PostComplex>();
             var post = _postService.GetComplexById(id);
             posts.Add(post);

@@ -38,6 +38,10 @@ namespace Tier.Business.Concrete
         {
             return _postDal.GetListComplexByCategoryId(skip, take, categoryId);
         }
+        public List<PostComplex> GetAllComplexByUserId(int skip, int take, int userId)
+        {
+            return _postDal.GetListComplex(skip, take, k => k.Post.UserId == userId);
+        }
 
         public PostComplex GetComplexById(int id)
         {

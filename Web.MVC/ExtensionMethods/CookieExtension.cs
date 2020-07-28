@@ -17,9 +17,7 @@ namespace Web.MVC.ExtensionMethods
         {
             CookieOptions cookie = new CookieOptions();
             cookie.Expires = DateTime.Now.AddHours(1);
-
             cook.Append(cookieName, val, cookie);
-            //  Response.Cookies.Append(string.Format("PostId{0}", param), param, cookie);
         }
     }
 }

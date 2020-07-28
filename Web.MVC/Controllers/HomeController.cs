@@ -32,11 +32,6 @@ namespace Web.MVC.Controllers
             return View(model);
         }
 
-
-
-
-
-
         //public IActionResult Privacy()
         //{
         //    return View();

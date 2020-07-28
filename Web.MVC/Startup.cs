@@ -52,6 +52,9 @@ namespace Web.MVC
             services.AddScoped<IPostCommentService, PostCommentManager>();
             services.AddScoped<IPostCommentDal, EfPostCommentDal>();
 
+            services.AddScoped<IUserService, UserManager>();
+            services.AddScoped<IUserDal, EfUserDal>();
+
 
             services.AddSingleton<ICartSessionService, CartSessionService>();
             services.AddSingleton<ICartService, CartService>();
