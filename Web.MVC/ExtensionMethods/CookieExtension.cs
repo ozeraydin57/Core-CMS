@@ -10,16 +10,16 @@ namespace Web.MVC.ExtensionMethods
     {
         public static string GetValue(this IRequestCookieCollection request, string cookieName)
         {
-           var val = request[cookieName];
+            var val = request[cookieName];
             return val;
         }
-        public static void SetValue(this IResponseCookies cook, string cookieName)
+        public static void SetValue(this IResponseCookies cook, string cookieName, string val = "1")
         {
             CookieOptions cookie = new CookieOptions();
-            cookie.Expires = DateTime.Now.AddHours(2);
-            cook.Append(cookieName, "1", cookie);
-            //  Response.Cookies.Append(string.Format("PostId{0}", param), param, cookie);
+            cookie.Expires = DateTime.Now.AddHours(1);
 
+            cook.Append(cookieName, val, cookie);
+            //  Response.Cookies.Append(string.Format("PostId{0}", param), param, cookie);
         }
     }
 }
