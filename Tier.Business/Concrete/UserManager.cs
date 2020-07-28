@@ -24,7 +24,8 @@ namespace Tier.Business.Concrete
 
         public User GetById(int id)
         {
-            return _userDal.Get(k => k.Id == id);
+            var ret= _userDal.Get(k => k.Id == id);
+            return ret;
         }
 
         public void Update(User data)

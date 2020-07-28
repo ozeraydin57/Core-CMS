@@ -17,8 +17,8 @@ namespace Tier.Entities.Concrete
         public string Web { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
-        public int CityCode { get; set; }
-        public int CountyCode { get; set; }
+        public int? CityCode { get; set; }
+        public int? CountyCode { get; set; }
         public string MapsUrl { get; set; }
         public string ImageUrl { get; set; }
         public bool IsActive { get; set; }
