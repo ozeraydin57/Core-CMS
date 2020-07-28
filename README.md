@@ -8,6 +8,7 @@ Proje backend de çok katmanlı mimari patternine göre ilerleyip .net core öze
 ## Olacak olan özellikleri
 
 -yazı yönetimi
+--yorum
 
 -menü ..
 
@@ -15,7 +16,7 @@ Proje backend de çok katmanlı mimari patternine göre ilerleyip .net core öze
 
 -etiket ..
 
--firma-yazar ..
+-firma-yazar sayfası..
 
 -gelişmiş seo 
 
