@@ -1,5 +1,6 @@
 ﻿@model Tier.Entities.Concrete.ResponseModel<Tier.Entities.Concrete.User>
 @{
+    string caption = Model.Data.Type == Tier.Entities.EnType.UserType.author.ToString() ? "Yazar" : "İşletme";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -7,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <h2><i class="fa fa-star bg-orange"></i> Yazar: @Model.Data.FullName</h2>
+                <h2><i class="fa fa-star bg-orange"></i>@caption : @Model.Data.FullName</h2>
             </div><!-- end col -->
             <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
                 <ol class="breadcrumb">
@@ -26,11 +27,11 @@
             <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                 <div class="page-wrapper">
 
-                    @await Component.InvokeAsync("AuthorBox", new { userId=Model.Data.Id })
+                    @await Component.InvokeAsync("AuthorBox", new { userId = Model.Data.Id })
 
                     <hr class="invis1">
 
-                    @await Component.InvokeAsync("PostRecent", new { skip = 0, userId = Model.Data.Id})
+                    @await Component.InvokeAsync("PostRecent", new { skip = 0, userId = Model.Data.Id })
 
                 </div><!-- end page-wrapper -->
 
