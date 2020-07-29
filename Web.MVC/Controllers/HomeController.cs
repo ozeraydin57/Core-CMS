@@ -24,10 +24,10 @@ namespace Web.MVC.Controllers
         {
             var model = new HomeViewModel
             {
-                Title = _paramSessionService.GetParam("Title").Description,
-                Description = _paramSessionService.GetParam("Description").Description,
-                Keywords = _paramSessionService.GetParam("Keywords").Description,
-                Author = _paramSessionService.GetParam("Author").Description,
+                MetaTitle = _paramSessionService.GetParam("Title").Description,
+                MetaDescription = _paramSessionService.GetParam("Description").Description,
+                MetaKeywords = _paramSessionService.GetParam("Keywords").Description,
+                MetaAuthor = _paramSessionService.GetParam("Author").Description,
             };
             return View(model);
         }

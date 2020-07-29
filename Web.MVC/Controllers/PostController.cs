@@ -46,10 +46,10 @@ namespace Web.MVC.Controllers
             var model = new PostViewModel
             {
                 Posts = posts,
-                Title = post.Post.MetaTitle ?? post.Post.Title,
-                Description = post.Post.MetaDescription ?? post.Post.Summary,
-                Keywords = post.Post.MetaKeyword ?? post.Post.Title,
-                Author = _paramSessionService.GetParam("Author").Description,
+                MetaTitle = post.Post.MetaTitle ?? post.Post.Title,
+                MetaDescription = post.Post.MetaDescription ?? post.Post.Summary,
+                MetaKeywords = post.Post.MetaKeyword ?? post.Post.Title,
+                MetaAuthor = _paramSessionService.GetParam("Author").Description,
             };
 
             return View(model);

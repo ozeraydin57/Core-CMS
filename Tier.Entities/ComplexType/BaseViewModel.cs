@@ -6,9 +6,9 @@ namespace Tier.Entities.ComplexType
 {
     public class BaseViewModel
     {
-        public String Title { get; set; }
-        public String Keywords { get; set; }
-        public String Description { get; set; }
-        public String Author { get; set; }
+        public String MetaTitle { get; set; }
+        public String MetaKeywords { get; set; }
+        public String MetaDescription { get; set; }
+        public String MetaAuthor { get; set; }
     }
 }

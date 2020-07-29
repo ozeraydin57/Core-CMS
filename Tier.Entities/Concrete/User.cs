@@ -21,6 +21,7 @@ namespace Tier.Entities.Concrete
         public int? CountyCode { get; set; }
         public string MapsUrl { get; set; }
         public string ImageUrl { get; set; }
+        public string Type { get; set; }
         public bool IsActive { get; set; }
     }
 }

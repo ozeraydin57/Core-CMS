@@ -28,10 +28,10 @@ namespace Web.MVC.Controllers
             
             var model = new CategoryViewModel
             {
-                Title = cat.Name,
-                Description = cat.Summary,
-                Keywords = cat.Name,
-                Author = _paramSessionService.GetParam("Author").Description,
+                MetaTitle = cat.Name,
+                MetaDescription = cat.Summary,
+                MetaKeywords = cat.Name,
+                MetaAuthor = _paramSessionService.GetParam("Author").Description,
                 Category = cat
             };
 

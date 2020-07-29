@@ -22,10 +22,10 @@ namespace Web.MVC.Controllers
             var user = _userService.GetById(userId);
             var response = new ResponseModel<User>
             {
-                Title = "User" + _paramSessionService.GetParam("Title").Description,
-                Description = _paramSessionService.GetParam("Description").Description,
-                Keywords = _paramSessionService.GetParam("Keywords").Description,
-                Author = _paramSessionService.GetParam("Author").Description,
+                MetaTitle = "User" + _paramSessionService.GetParam("Title").Description,
+                MetaDescription = _paramSessionService.GetParam("Description").Description,
+                MetaKeywords = _paramSessionService.GetParam("Keywords").Description,
+                MetaAuthor = _paramSessionService.GetParam("Author").Description,
                 Data = user
             };
 
