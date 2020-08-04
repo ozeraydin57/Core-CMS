@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Tier.Business.Abstract;
 using Tier.Entities.Concrete;
+using Tier.Entities.EnType;
 using Web.MVC.ExtensionMethods;
 using Web.MVC.Models;
 using Web.MVC.Services;
@@ -49,7 +50,7 @@ namespace Web.MVC.Controllers
                 MetaTitle = post.Post.MetaTitle ?? post.Post.Title,
                 MetaDescription = post.Post.MetaDescription ?? post.Post.Summary,
                 MetaKeywords = post.Post.MetaKeyword ?? post.Post.Title,
-                MetaAuthor = _paramSessionService.GetParam("Author").Description,
+                MetaAuthor = _paramSessionService.GetParam(ParamType.Author).Description,
             };
 
             return View(model);

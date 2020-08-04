@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Tier.Business.Abstract;
 using Tier.Entities.Concrete;
+using Tier.Entities.EnType;
 using Web.MVC.Models;
 using Web.MVC.Services;
 
@@ -39,7 +40,7 @@ namespace Web.MVC.Controllers
             var model = new ProductAddViewModel
             {
                 Product = new Product(),
-                Categories = _categoryService.GetAll("category")
+                Categories = _categoryService.GetAll(CaTagType.category.ToString())
             };
             return View(model);
         }
@@ -61,7 +62,7 @@ namespace Web.MVC.Controllers
             var model = new ProductUpdateViewModel
             {
                 Product = _productService.GetById(productId),
-                Categories = _categoryService.GetAll("category")
+                Categories = _categoryService.GetAll(CaTagType.category.ToString())
             };
 
             return View(model);

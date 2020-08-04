@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Tier.Business.Abstract;
 using Tier.Entities.ComplexType;
 using Tier.Entities.Concrete;
+using Tier.Entities.EnType;
 using Web.MVC.Models;
 using Web.MVC.Services;
 
@@ -31,7 +32,7 @@ namespace Web.MVC.Controllers
                 MetaTitle = cat.Name,
                 MetaDescription = cat.Summary,
                 MetaKeywords = cat.Name,
-                MetaAuthor = _paramSessionService.GetParam("Author").Description,
+                MetaAuthor = _paramSessionService.GetParam(ParamType.Author).Description,
                 Category = cat
             };
 

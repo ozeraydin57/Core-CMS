@@ -21,7 +21,7 @@ namespace Web.MVC.Services
             _paramService = paramService;
         }
 
-        public Param GetParam(string key)
+        public Param GetParam(ParamType key)
         {
             List<Param> setting = _httpContextAccessor.HttpContext.Session.GetObject<List<Param>>(SessionType.param);
             if (setting == null)
@@ -29,7 +29,7 @@ namespace Web.MVC.Services
                 _httpContextAccessor.HttpContext.Session.SetObject(SessionType.param, _paramService.GetAll());
                 setting = _httpContextAccessor.HttpContext.Session.GetObject<List<Param>>(SessionType.param);
             }
-            var ret = setting.Where(k => k.Name == key).FirstOrDefault();
+            var ret = setting.Where(k => k.Name == key.ToString()).FirstOrDefault();
             if (ret != null)
                 return ret;
             else

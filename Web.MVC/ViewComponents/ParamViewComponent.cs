@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tier.Entities.Concrete;
+using Tier.Entities.EnType;
 using Web.MVC.Models;
 using Web.MVC.Services;
 
@@ -18,7 +19,7 @@ namespace Web.MVC.ViewComponents
             _settingService = settingService;
         }
 
-        public ViewViewComponentResult Invoke(string key)
+        public ViewViewComponentResult Invoke(ParamType key)
         {
             var value = _settingService.GetParam(key)?? new Param();
 

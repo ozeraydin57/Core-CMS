@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Tier.Business.Abstract;
 using Tier.Entities.Concrete;
+using Tier.Entities.EnType;
 using Web.MVC.Models;
 using Web.MVC.Services;
 
@@ -26,10 +27,10 @@ namespace Web.MVC.Controllers
         {
             var model = new ContactViewModel
             {
-                MetaTitle = _paramSessionService.GetParam("Title").Description,
-                MetaDescription = _paramSessionService.GetParam("Description").Description,
-                MetaKeywords = _paramSessionService.GetParam("Keywords").Description,
-                MetaAuthor = _paramSessionService.GetParam("Author").Description,
+                MetaTitle = _paramSessionService.GetParam(ParamType.Title).Description,
+                MetaDescription = _paramSessionService.GetParam(ParamType.Description).Description,
+                MetaKeywords = _paramSessionService.GetParam(ParamType.Keywords).Description,
+                MetaAuthor = _paramSessionService.GetParam(ParamType.Author).Description,
             };
             return View(model);
         }

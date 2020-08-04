@@ -81,13 +81,12 @@
                         <div class="widget">
                             <div class="footer-text text-left">
                                 <a href="index.html"><img src="images/version/tech-footer-logo.png" alt="" class="img-fluid"></a>
-                                @await Component.InvokeAsync("Param", new { key = "FooterSlogan" })
+                                @await Component.InvokeAsync("Param", new { key = Tier.Entities.EnType.ParamType.FooterSlogan })
                                 <div class="social">
-                                    <a href="@await Component.InvokeAsync("Param",new{ key="Facebook" })" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
-                                    <a href="@await Component.InvokeAsync("Param",new{ key="Twitter" })" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="@await Component.InvokeAsync("Param",new{ key="Instagram" })" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
-                                    <a href="@await Component.InvokeAsync("Param",new{ key="GooglePlus" })" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-                                    <a href="@await Component.InvokeAsync("Param",new{ key="Pinterest" })" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+                                    <a href="@await Component.InvokeAsync("Param",new{ key=Tier.Entities.EnType.ParamType.Facebook })" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="@await Component.InvokeAsync("Param",new{ key=Tier.Entities.EnType.ParamType.Twitter })" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="@await Component.InvokeAsync("Param",new{ key=Tier.Entities.EnType.ParamType.Instagram })" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                    <a href="@await Component.InvokeAsync("Param",new{ key=Tier.Entities.EnType.ParamType.GooglePlus })" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
                                 </div>
 
                                 <hr class="invis">
@@ -115,7 +114,7 @@
                     <div class="col-md-12 text-center">
                         <br>
                         <div class="copyright">
-                            @await Component.InvokeAsync("Param", new { key = "CopyRight" })
+                            @await Component.InvokeAsync("Param", new { key = Tier.Entities.EnType.ParamType.CopyRight })
                         </div>
                     </div>
                 </div>

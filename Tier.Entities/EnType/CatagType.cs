@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Tier.Entities.EnType
 {
-    public enum PostType
+    public enum CaTagType
     {
-        post,
-        page,
-        product,
-        activity
+        category,
+        tag
     }
 }
