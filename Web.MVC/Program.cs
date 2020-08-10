@@ -22,5 +22,6 @@ namespace Web.MVC
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }
