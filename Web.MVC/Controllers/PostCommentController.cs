@@ -52,7 +52,7 @@ namespace Web.MVC.Controllers
 
             var response = new ResponseModel<List<PostComment>>
             {
-                Data=list,
+                Data = list,
                 Success = true,
                 Message = "Yorum Listesi"
             };
