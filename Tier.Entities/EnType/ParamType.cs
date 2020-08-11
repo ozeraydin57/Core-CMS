@@ -16,6 +16,8 @@ namespace Tier.Entities.EnType
         Instagram,
         GooglePlus,
         FooterSlogan,
-        CopyRight
+        CopyRight,
+        ContactDescription,
+        ContactHeader
     }
 }

@@ -8,7 +8,6 @@ namespace Web.MVC.Controllers
 {
     public class AuthorController : Controller
     {
-
         private IParamSessionService _paramSessionService;
         private IUserService _userService;
         public AuthorController(IParamSessionService paramSessionService, IUserService userService)
@@ -29,7 +28,6 @@ namespace Web.MVC.Controllers
                 MetaAuthor = _paramSessionService.GetParam(ParamType.Author).Description,
                 Data = user
             };
-
 
             return View(response);
         }

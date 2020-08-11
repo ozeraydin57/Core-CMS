@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <h2><i class="fa fa-envelope-open-o bg-orange"></i> Bize yazın <small class="hidden-xs-down hidden-sm-down"> @await Component.InvokeAsync("Param", new { key = "ContactHeader" }) </small></h2>
+                <h2><i class="fa fa-envelope-open-o bg-orange"></i> Bize yazın <small class="hidden-xs-down hidden-sm-down"> @await Component.InvokeAsync("Param", new { key = Tier.Entities.EnType.ParamType.ContactHeader }) </small></h2>
             </div><!-- end col -->
             <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
                 <ol class="breadcrumb">
@@ -24,7 +24,7 @@
                 <div class="page-wrapper">
                     <div class="row">
                         <div class="col-lg-5">
-                            @await Component.InvokeAsync("Param", new { key = "ContactDescription" })
+                            @await Component.InvokeAsync("Param", new { key = Tier.Entities.EnType.ParamType.ContactDescription })
                         </div>
                         <div class="col-lg-7">
                             <div class="form-wrapper">
