@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿    <>s>E4RFQQS<using Microsoft.AspNetCore.Mvc;
 using Tier.Business.Abstract;
 using Tier.Entities.Concrete;
 using Tier.Entities.EnType;
