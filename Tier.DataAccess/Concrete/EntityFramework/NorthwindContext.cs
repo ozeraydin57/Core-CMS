@@ -10,7 +10,7 @@ namespace Tier.DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=.;database=HEDIYE;trusted_connection=true;");
+            optionsBuilder.UseSqlServer(@"server=OAEV\MSSQLSERVER2012;database=HEDIYE;trusted_connection=true;");
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Category { get; set; }

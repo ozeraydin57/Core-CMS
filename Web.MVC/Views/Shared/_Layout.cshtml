@@ -56,17 +56,8 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         @await Component.InvokeAsync("Navbar")
 
-                        <ul class="navbar-nav mr-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-rss"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-android"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
-                            </li>
-                        </ul>
+                        @await Component.InvokeAsync("Loginbar") 
+
                     </div>
                 </nav>
             </div><!-- end container-fluid -->
@@ -91,12 +82,8 @@
 
                                 <hr class="invis">
 
-                                <div class="newsletter-widget text-left">
-                                    <form class="form-inline">
-                                        <input type="text" class="form-control" placeholder="Enter your email address">
-                                        <button type="submit" class="btn btn-primary">SUBMIT</button>
-                                    </form>
-                                </div><!-- end newsletter -->
+                                @await Component.InvokeAsync("Newsletter")
+
                             </div><!-- end footer-text -->
                         </div><!-- end widget -->
                     </div><!-- end col -->
