@@ -47,7 +47,10 @@ namespace Web.MVC
             services.AddScoped<ICategoryDal, EfCategoryDal>();
 
             services.AddScoped<IContactService, ContactManager>();
-            services.AddScoped<IContactDal, EfContactDal>();
+            services.AddScoped<IContactDal, EfContactDal>(); 
+            
+            services.AddScoped<INewsletterService, NewsletterManager>();
+            services.AddScoped<INewsletterDal, EfNewsletterDal>();
 
             services.AddScoped<IPostCommentService, PostCommentManager>();
             services.AddScoped<IPostCommentDal, EfPostCommentDal>();

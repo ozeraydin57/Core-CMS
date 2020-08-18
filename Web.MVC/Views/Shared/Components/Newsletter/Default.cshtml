@@ -1,6 +1,14 @@
-﻿<div class="newsletter-widget text-left">
+﻿<div class="newsletter-widget text-left" id="vueNewsletter">
     <div class="form-inline">
-        <input type="text" class="form-control" placeholder="Bülten için Eposta adresinizi giriniz">
-        <button type="submit" class="btn btn-primary">Abone ol</button>
+        <input type="text" class="form-control" v-model="email" placeholder="Bülten için Eposta adresinizi giriniz">
+        <button v-on:disabled="disabledButton==true" class="btn btn-primary " v-on:click="sendMessage">Abone ol <i class="fa fa-envelope-open-o"></i></button>
+    </div>
+    <div class="alertSuccNewsletter alert alert-success mt-2" style="display:none;">
+        <strong> {{response.message}} </strong>
+    </div>
+    <div class="alertErrNewsletter alert alert-danger mt-2" style="display:none;">
+        <strong> {{error}} </strong>
     </div>
 </div><!-- end newsletter -->
+
+<script src="~/js/vuejs/NewsletterVj.js"></script>
