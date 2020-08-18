@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Tier.Business.Abstract;
+using Tier.Entities.ComplexType;
 using Tier.Entities.Concrete;
 using Tier.Entities.EnType;
 using Web.MVC.ExtensionMethods;

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Tier.Entities.Concrete;
 
-namespace Tier.Entities.Concrete
+namespace Tier.Entities.ComplexType
 {
     public class PostComplex
     {

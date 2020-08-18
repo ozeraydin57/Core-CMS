@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Tier.Entities.ComplexType;
 using Tier.Entities.Concrete;
 
 namespace Tier.Business.Abstract

@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 using System.Security.Cryptography;
 using System.Text;
 using Tier.DataAccess.Abstract;
+using Tier.Entities.ComplexType;
 using Tier.Entities.Concrete;
 
 namespace Tier.DataAccess.Concrete.EntityFramework

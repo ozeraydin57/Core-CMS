@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Tier.Business.Abstract;
 using Tier.DataAccess.Abstract;
+using Tier.Entities.ComplexType;
 using Tier.Entities.Concrete;
 
 namespace Tier.Business.Concrete
