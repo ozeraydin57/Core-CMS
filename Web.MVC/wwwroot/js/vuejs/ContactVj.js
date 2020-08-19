@@ -8,14 +8,14 @@
         message: null,
         response: '',
         disabledButton: false,
-        error:null
+        error: null
     },
     methods: {
         sendMessage: function () {
             $('.alertSucc').hide();
             $('.alertErr').hide();
             if (this.checkForm()) {
-         
+
                 this.disabledButton = true;
                 this.response = "Mesajınız iletiliyor.."
 
@@ -44,9 +44,15 @@
         },
         checkForm: function () {
             if (this.name && this.email && this.message) {
-                return true;
-            }
-            this.error = "Lütfen * ile işaretlenmiş alanları doldurunuz!"
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if (this.email.match(mailformat)) {
+                    return true;
+                }
+                else {
+                    this.error = "Lütfen doğru eposta adresi giriniz!";
+                }
+            } else
+                this.error = "Lütfen * ile işaretlenmiş alanları doldurunuz!"
             $('.alertErr').fadeIn();
             return false;
         }

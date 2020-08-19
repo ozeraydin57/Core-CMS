@@ -42,9 +42,15 @@
         },
         checkForm: function () {
             if (this.name && this.email && this.comment) {
-                return true;
-            }
-            this.error = "Lütfen * ile işaretlenmiş alanları doldurunuz!"
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if (this.email.match(mailformat)) {
+                    return true;
+                }
+                else {
+                    this.error = "Lütfen doğru eposta adresi giriniz!";
+                }
+            } else
+                this.error = "Lütfen * ile işaretlenmiş alanları doldurunuz!"
             $('.alertErr').fadeIn();
             return false;
         }
